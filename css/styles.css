@@ -1,0 +1,149 @@
+:root {
+    --accent-color: white;
+    --accent-dark-color: #EF2B2F;
+    --font-color: #595959;
+    --bg-color: lightgray;
+}
+
+body {
+    background-color: white;
+    font-family: Verdana, sans-serif;
+    color: var(--font-color);
+}
+
+main {
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 5px 10px;
+}
+
+a:link {
+    color: var(--font-color);
+}   
+
+a:visited {
+    color: var(--font-color);
+}   
+
+a:hover {
+    color: var(--accent-color);
+}  
+
+a:active {
+    color: var(--accent-color);
+}   
+
+header {
+    background-color: black;
+    padding: 5px 0;
+    margin: 0;
+}
+
+header h1 {
+   color: var(--accent-color);
+   font-size: 3rem;
+   margin: 10px 10px;
+   text-shadow: 2px 2px 3px gray;
+}
+
+nav ul {
+   list-style-type: none;
+   padding: 10px 0;
+}
+
+nav li {
+    display: inline;
+}
+
+nav li a {
+    padding: 10px 20px;
+}
+
+nav li a:link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+nav li a:visited {
+    color: white;
+}
+
+nav li a:hover {
+    color: orange;
+    background-color: var(--accent-color);
+}
+
+.photo {
+    position: relative;
+}
+
+.photo img[src="img/home.jpg"]{
+    border-radius: 50%;
+    border: 3px solid orange;
+    padding: 0px;
+    width: 150px;
+}
+
+.photo img[src="img/baby-working-on-a-laptop.jpg"], img[src="img/messy-desk-clean-me.jpg"]{
+    border-radius: 15px;
+    border: 3px solid orange;
+    padding: 0px;
+    width: 300px;
+}
+
+.thumb {
+    position: absolute;
+    top: 90px;
+    left: 10px;
+    width: 180px;
+}
+
+.thumb img[src="img/thumb.png"]{
+    width: 40px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: 300px auto;
+    grid-template-areas:
+        "name more"
+        "details more";
+    border-radius: 5px;
+    background: white;
+    padding: 8px 8px;
+    margin: 10px 0;
+    font-size: smaller;
+}
+
+.projects-name {
+    grid-area: name;
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.projects-details {
+    grid-area: details;
+    font-size: larger;
+    left: 60px;
+}
+
+.projects-more {
+    grid-area: more;
+    text-align: left;
+}
+
+.projects-more img {
+    vertical-align: text-top;
+    width: 400px;
+}
+
+.projects a:hover {
+    color: orange;
+}
+
+.projects-more img:hover {
+    opacity: 0.3;
+    filter: saturate(7);
+}
